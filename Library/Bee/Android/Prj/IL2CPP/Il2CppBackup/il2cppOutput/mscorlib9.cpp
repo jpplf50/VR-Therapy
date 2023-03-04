@@ -2227,9 +2227,9 @@ struct SoapAttribute_t41093087BF547190DF8FF1D30BF50ACBDB003AD9  : public Attribu
 struct Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE  : public MarshalByRefObject_t8C2F4C5854177FD60439EB1FCCFC1B3CFAFE8DCE
 {
 	// System.IO.Stream/ReadWriteTask System.IO.Stream::_activeReadWriteTask
-	ReadWriteTask_t0821BF49EE38596C7734E86E1A6A39D769BE2C05* ____activeReadWriteTask_2;
+	ReadWriteTask_t0821BF49EE38596C7734E86E1A6A39D769BE2C05* ____activeReadWriteTask_3;
 	// System.Threading.SemaphoreSlim System.IO.Stream::_asyncActiveSemaphore
-	SemaphoreSlim_t0D5CB5685D9BFA5BF95CEC6E7395490F933E8DB2* ____asyncActiveSemaphore_3;
+	SemaphoreSlim_t0D5CB5685D9BFA5BF95CEC6E7395490F933E8DB2* ____asyncActiveSemaphore_4;
 };
 
 struct Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE_StaticFields
@@ -2607,25 +2607,25 @@ struct MD5CryptoServiceProvider_tEBA22E49E733DDFE74A3F52711BB1EF82FBF653B_Static
 struct MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2  : public Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE
 {
 	// System.Byte[] System.IO.MemoryStream::_buffer
-	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ____buffer_4;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ____buffer_5;
 	// System.Int32 System.IO.MemoryStream::_origin
-	int32_t ____origin_5;
+	int32_t ____origin_6;
 	// System.Int32 System.IO.MemoryStream::_position
-	int32_t ____position_6;
+	int32_t ____position_7;
 	// System.Int32 System.IO.MemoryStream::_length
-	int32_t ____length_7;
+	int32_t ____length_8;
 	// System.Int32 System.IO.MemoryStream::_capacity
-	int32_t ____capacity_8;
+	int32_t ____capacity_9;
 	// System.Boolean System.IO.MemoryStream::_expandable
-	bool ____expandable_9;
+	bool ____expandable_10;
 	// System.Boolean System.IO.MemoryStream::_writable
-	bool ____writable_10;
+	bool ____writable_11;
 	// System.Boolean System.IO.MemoryStream::_exposable
-	bool ____exposable_11;
+	bool ____exposable_12;
 	// System.Boolean System.IO.MemoryStream::_isOpen
-	bool ____isOpen_12;
+	bool ____isOpen_13;
 	// System.Threading.Tasks.Task`1<System.Int32> System.IO.MemoryStream::_lastReadTask
-	Task_1_t4C228DE57804012969575431CFF12D57C875552D* ____lastReadTask_13;
+	Task_1_t4C228DE57804012969575431CFF12D57C875552D* ____lastReadTask_14;
 };
 
 // System.Security.Cryptography.RNGCryptoServiceProvider
@@ -3937,6 +3937,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F (Exception_t* __this, String_t* ___message0, const RuntimeMethod* method) ;
 // System.Void System.Exception::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Exception__ctor_m412D5FC4D69035738F1DB88FD771ABD6B0E9E120 (Exception_t* __this, SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* ___info0, StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 ___context1, const RuntimeMethod* method) ;
+// System.Void System.Runtime.RuntimeImports::ZeroMemory(System.Void*,System.UInt32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeImports_ZeroMemory_m0F1B81B847BC9D88E3852B120C07B799C140552D (void* ___p0, uint32_t ___byteLength1, const RuntimeMethod* method) ;
 // System.Object[] System.Runtime.Remoting.Channels.ChannelServices::GetCurrentChannelInfo()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ChannelServices_GetCurrentChannelInfo_mA1C33C926A7C7612AFE528E88747963A9E7B0BFD (const RuntimeMethod* method) ;
 // System.Void System.Runtime.Remoting.TypeEntry::.ctor()
@@ -22352,6 +22354,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AmbiguousImplementationException__ctor_m
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void System.Runtime.RuntimeImports::RhZeroMemory(System.Byte&,System.UInt64)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeImports_RhZeroMemory_m412EFFB5FBA11DD440375C72285A875977361A85 (uint8_t* ___b0, uint64_t ___byteLength1, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	{
+		uint8_t* L_0 = ___b0;
+		V_0 = L_0;
+		uint8_t* L_1 = V_0;
+		uint64_t L_2 = ___byteLength1;
+		RuntimeImports_ZeroMemory_m0F1B81B847BC9D88E3852B120C07B799C140552D((void*)((uintptr_t)L_1), ((int32_t)(uint32_t)L_2), NULL);
+		V_0 = (uint8_t*)((uintptr_t)0);
+		return;
+	}
+}
+// System.Void System.Runtime.RuntimeImports::ZeroMemory(System.Void*,System.UInt32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeImports_ZeroMemory_m0F1B81B847BC9D88E3852B120C07B799C140552D (void* ___p0, uint32_t ___byteLength1, const RuntimeMethod* method) 
+{
+	typedef void (*RuntimeImports_ZeroMemory_m0F1B81B847BC9D88E3852B120C07B799C140552D_ftn) (void*, uint32_t);
+	using namespace il2cpp::icalls;
+	((RuntimeImports_ZeroMemory_m0F1B81B847BC9D88E3852B120C07B799C140552D_ftn)mscorlib::System::Runtime::RuntimeImports::ZeroMemory) (___p0, ___byteLength1);
+}
 // System.Void System.Runtime.RuntimeImports::Memmove(System.Byte*,System.Byte*,System.UInt32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeImports_Memmove_mB3E90ADCBBB4053F9E03DA324E8AC50BB33ABA38 (uint8_t* ___dest0, uint8_t* ___src1, uint32_t ___len2, const RuntimeMethod* method) 
 {

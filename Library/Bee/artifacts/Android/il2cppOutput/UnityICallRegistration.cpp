@@ -742,6 +742,14 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Animator_get_hasBoundPlayables();
 		Register_UnityEngine_Animator_get_hasBoundPlayables();
 
+		//System.Int32 UnityEngine.Animator::StringToHash(System.String)
+		void Register_UnityEngine_Animator_StringToHash();
+		Register_UnityEngine_Animator_StringToHash();
+
+		//System.Void UnityEngine.Animator::Play(System.Int32,System.Int32,System.Single)
+		void Register_UnityEngine_Animator_Play();
+		Register_UnityEngine_Animator_Play();
+
 		//System.Void UnityEngine.Animator::ResetTriggerString(System.String)
 		void Register_UnityEngine_Animator_ResetTriggerString();
 		Register_UnityEngine_Animator_ResetTriggerString();
@@ -1574,6 +1582,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GameObject_get_layer();
 		Register_UnityEngine_GameObject_get_layer();
 
+		//System.String UnityEngine.GameObject::get_tag()
+		void Register_UnityEngine_GameObject_get_tag();
+		Register_UnityEngine_GameObject_get_tag();
+
 		//System.Void UnityEngine.GameObject::GetComponentFastPath(System.Type,System.IntPtr)
 		void Register_UnityEngine_GameObject_GetComponentFastPath();
 		Register_UnityEngine_GameObject_GetComponentFastPath();
@@ -1621,6 +1633,10 @@ void RegisterAllStrippedInternalCalls()
 		//UnityEngine.GameObject UnityEngine.GameObject::Find(System.String)
 		void Register_UnityEngine_GameObject_Find();
 		Register_UnityEngine_GameObject_Find();
+
+		//UnityEngine.GameObject UnityEngine.GameObject::FindGameObjectWithTag(System.String)
+		void Register_UnityEngine_GameObject_FindGameObjectWithTag();
+		Register_UnityEngine_GameObject_FindGameObjectWithTag();
 
 		//UnityEngine.GameObject[] UnityEngine.GameObject::FindGameObjectsWithTag(System.String)
 		void Register_UnityEngine_GameObject_FindGameObjectsWithTag();
@@ -4188,14 +4204,6 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.UnityLogWriter
 
-	//Start Registrations for type : UnityEngine.Vector3
-
-		//System.Void UnityEngine.Vector3::Slerp_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&,System.Single,UnityEngine.Vector3&)
-		void Register_UnityEngine_Vector3_Slerp_Injected();
-		Register_UnityEngine_Vector3_Slerp_Injected();
-
-	//End Registrations for type : UnityEngine.Vector3
-
 	//Start Registrations for type : UnityEngine.XR.InputDevices
 
 		//System.Boolean UnityEngine.XR.InputDevices::IsDeviceValid(System.UInt64)
@@ -4254,10 +4262,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_XR_InputTracking_GetNodeStates_Internal();
 		Register_UnityEngine_XR_InputTracking_GetNodeStates_Internal();
 
-		//System.Void UnityEngine.XR.InputTracking::Recenter()
-		void Register_UnityEngine_XR_InputTracking_Recenter();
-		Register_UnityEngine_XR_InputTracking_Recenter();
-
 	//End Registrations for type : UnityEngine.XR.InputTracking
 
 	//Start Registrations for type : UnityEngine.XR.Provider.XRStats
@@ -4269,10 +4273,6 @@ void RegisterAllStrippedInternalCalls()
 	//End Registrations for type : UnityEngine.XR.Provider.XRStats
 
 	//Start Registrations for type : UnityEngine.XR.XRDevice
-
-		//System.Boolean UnityEngine.XR.XRDevice::SetTrackingSpaceType(UnityEngine.XR.TrackingSpaceType)
-		void Register_UnityEngine_XR_XRDevice_SetTrackingSpaceType();
-		Register_UnityEngine_XR_XRDevice_SetTrackingSpaceType();
 
 		//System.Void UnityEngine.XR.XRDevice::DisableAutoXRCameraTracking(UnityEngine.Camera,System.Boolean)
 		void Register_UnityEngine_XR_XRDevice_DisableAutoXRCameraTracking();

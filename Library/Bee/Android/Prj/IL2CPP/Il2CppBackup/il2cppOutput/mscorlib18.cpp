@@ -11,6 +11,16 @@
 #include <stdint.h>
 
 
+struct InterfaceActionInvoker0
+{
+	typedef void (*Action)(void*, const RuntimeMethod*);
+
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
+		((Action)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
 
 // System.Byte[]
 struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
@@ -24,6 +34,8 @@ struct ArrayPoolEventSource_tDB6CA549DFC2FBEB134C71EB85DBD6D943E5C888;
 struct EventSource_tA86759A1E6F272632C299AAC181C0A67E5C52F25;
 // System.Collections.IDictionary
 struct IDictionary_t6D03155AF1FA9083817AA5B6AD7DEEACC26AB220;
+// System.Buffers.IPinnable
+struct IPinnable_tA3989EA495C0118966BAAF8848C0009947BB49C0;
 // System.PlatformNotSupportedException
 struct PlatformNotSupportedException_tD2BD7EB9278518AA5FE8AE75AD5D0D4298A4631A;
 // System.Runtime.Serialization.SafeSerializationManager
@@ -34,6 +46,7 @@ struct String_t;
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
 
 IL2CPP_EXTERN_C RuntimeClass* ArrayPoolEventSource_tDB6CA549DFC2FBEB134C71EB85DBD6D943E5C888_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IPinnable_tA3989EA495C0118966BAAF8848C0009947BB49C0_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* PlatformNotSupportedException_tD2BD7EB9278518AA5FE8AE75AD5D0D4298A4631A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C String_t* _stringLiteral71943296949CB7F897DB641231533D430DE14FF8;
 IL2CPP_EXTERN_C const RuntimeMethod* ArrayPoolEventSource_BufferAllocated_m8460B99481867223928865EA0076CCF983EE3DB0_RuntimeMethod_var;
@@ -112,6 +125,21 @@ struct ArrayPoolEventSource_tDB6CA549DFC2FBEB134C71EB85DBD6D943E5C888_StaticFiel
 {
 	// System.Buffers.ArrayPoolEventSource System.Buffers.ArrayPoolEventSource::Log
 	ArrayPoolEventSource_tDB6CA549DFC2FBEB134C71EB85DBD6D943E5C888* ___Log_1;
+};
+
+// System.Boolean
+struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22 
+{
+	// System.Boolean System.Boolean::m_value
+	bool ___m_value_0;
+};
+
+struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_StaticFields
+{
+	// System.String System.Boolean::TrueString
+	String_t* ___TrueString_5;
+	// System.String System.Boolean::FalseString
+	String_t* ___FalseString_6;
 };
 
 // System.Byte
@@ -1182,6 +1210,13 @@ struct Exception_t_marshaled_com
 	int32_t ___caught_in_unmanaged_16;
 };
 
+// System.Runtime.InteropServices.GCHandle
+struct GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC 
+{
+	// System.IntPtr System.Runtime.InteropServices.GCHandle::handle
+	intptr_t ___handle_0;
+};
+
 // System.Diagnostics.Tracing.EventSource/EventData
 struct EventData_tEB579D26516CF33445B84ADE75307FA8EAF6CA4D 
 {
@@ -1191,6 +1226,31 @@ struct EventData_tEB579D26516CF33445B84ADE75307FA8EAF6CA4D
 	int32_t ___U3CSizeU3Ek__BackingField_1;
 	// System.Int32 System.Diagnostics.Tracing.EventSource/EventData::<Reserved>k__BackingField
 	int32_t ___U3CReservedU3Ek__BackingField_2;
+};
+
+// System.Buffers.MemoryHandle
+struct MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD 
+{
+	// System.Void* System.Buffers.MemoryHandle::_pointer
+	void* ____pointer_0;
+	// System.Runtime.InteropServices.GCHandle System.Buffers.MemoryHandle::_handle
+	GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC ____handle_1;
+	// System.Buffers.IPinnable System.Buffers.MemoryHandle::_pinnable
+	RuntimeObject* ____pinnable_2;
+};
+// Native definition for P/Invoke marshalling of System.Buffers.MemoryHandle
+struct MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD_marshaled_pinvoke
+{
+	void* ____pointer_0;
+	GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC ____handle_1;
+	RuntimeObject* ____pinnable_2;
+};
+// Native definition for COM marshalling of System.Buffers.MemoryHandle
+struct MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD_marshaled_com
+{
+	void* ____pointer_0;
+	GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC ____handle_1;
+	RuntimeObject* ____pinnable_2;
 };
 
 // System.SystemException
@@ -1250,6 +1310,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventSource_WriteEvent_m29A840C8BA6AEBC2
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventSource_WriteEvent_mF3DADFC0459BB9C89B17BCECE51A57C3F4ED7D88 (EventSource_tA86759A1E6F272632C299AAC181C0A67E5C52F25* __this, int32_t ___eventId0, int32_t ___arg11, int32_t ___arg22, const RuntimeMethod* method) ;
 // System.Void System.Buffers.ArrayPoolEventSource::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArrayPoolEventSource__ctor_m630817B899F980174697248E423104D06EC63F2E (ArrayPoolEventSource_tDB6CA549DFC2FBEB134C71EB85DBD6D943E5C888* __this, const RuntimeMethod* method) ;
+// System.Void System.Buffers.MemoryHandle::.ctor(System.Void*,System.Runtime.InteropServices.GCHandle,System.Buffers.IPinnable)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MemoryHandle__ctor_mBC4C2B7E7F10F5F93EFCF6A3A24D41CE79916C91 (MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD* __this, void* ___pointer0, GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC ___handle1, RuntimeObject* ___pinnable2, const RuntimeMethod* method) ;
+// System.Void* System.Buffers.MemoryHandle::get_Pointer()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void* MemoryHandle_get_Pointer_mB37B69B8014746F855683C47FF2E6EC46D656CA8_inline (MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD* __this, const RuntimeMethod* method) ;
+// System.Boolean System.Runtime.InteropServices.GCHandle::get_IsAllocated()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GCHandle_get_IsAllocated_m241908103D8D867E11CCAB73C918729825E86843 (GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC* __this, const RuntimeMethod* method) ;
+// System.Void System.Runtime.InteropServices.GCHandle::Free()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GCHandle_Free_m1320A260E487EB1EA6D95F9E54BFFCB5A4EF83A3 (GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC* __this, const RuntimeMethod* method) ;
+// System.Void System.Buffers.MemoryHandle::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MemoryHandle_Dispose_m1F3EAA54B49EACFC7E489AEF1FF630553FEBE229 (MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD* __this, const RuntimeMethod* method) ;
 // System.UInt32 System.Buffers.Binary.BinaryPrimitives::ReverseEndianness(System.UInt32)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t BinaryPrimitives_ReverseEndianness_mCCA2099164ECA9672968898DD996A9F04B392FFF_inline (uint32_t ___value0, const RuntimeMethod* method) ;
 // System.Char System.String::get_Chars(System.Int32)
@@ -1466,6 +1536,134 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArrayPoolEventSource__cctor_m9E459A789B6
 		Il2CppCodeGenWriteBarrier((void**)(&((ArrayPoolEventSource_tDB6CA549DFC2FBEB134C71EB85DBD6D943E5C888_StaticFields*)il2cpp_codegen_static_fields_for(ArrayPoolEventSource_tDB6CA549DFC2FBEB134C71EB85DBD6D943E5C888_il2cpp_TypeInfo_var))->___Log_1), (void*)L_0);
 		return;
 	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Conversion methods for marshalling of: System.Buffers.MemoryHandle
+IL2CPP_EXTERN_C void MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD_marshal_pinvoke(const MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD& unmarshaled, MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD_marshaled_pinvoke& marshaled)
+{
+	Exception_t* ____pinnable_2Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field '_pinnable' of type 'MemoryHandle': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(____pinnable_2Exception, NULL);
+}
+IL2CPP_EXTERN_C void MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD_marshal_pinvoke_back(const MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD_marshaled_pinvoke& marshaled, MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD& unmarshaled)
+{
+	Exception_t* ____pinnable_2Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field '_pinnable' of type 'MemoryHandle': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(____pinnable_2Exception, NULL);
+}
+// Conversion method for clean up from marshalling of: System.Buffers.MemoryHandle
+IL2CPP_EXTERN_C void MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD_marshal_pinvoke_cleanup(MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD_marshaled_pinvoke& marshaled)
+{
+}
+// Conversion methods for marshalling of: System.Buffers.MemoryHandle
+IL2CPP_EXTERN_C void MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD_marshal_com(const MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD& unmarshaled, MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD_marshaled_com& marshaled)
+{
+	Exception_t* ____pinnable_2Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field '_pinnable' of type 'MemoryHandle': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(____pinnable_2Exception, NULL);
+}
+IL2CPP_EXTERN_C void MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD_marshal_com_back(const MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD_marshaled_com& marshaled, MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD& unmarshaled)
+{
+	Exception_t* ____pinnable_2Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field '_pinnable' of type 'MemoryHandle': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(____pinnable_2Exception, NULL);
+}
+// Conversion method for clean up from marshalling of: System.Buffers.MemoryHandle
+IL2CPP_EXTERN_C void MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD_marshal_com_cleanup(MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD_marshaled_com& marshaled)
+{
+}
+// System.Void System.Buffers.MemoryHandle::.ctor(System.Void*,System.Runtime.InteropServices.GCHandle,System.Buffers.IPinnable)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MemoryHandle__ctor_mBC4C2B7E7F10F5F93EFCF6A3A24D41CE79916C91 (MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD* __this, void* ___pointer0, GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC ___handle1, RuntimeObject* ___pinnable2, const RuntimeMethod* method) 
+{
+	{
+		void* L_0 = ___pointer0;
+		__this->____pointer_0 = L_0;
+		GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC L_1 = ___handle1;
+		__this->____handle_1 = L_1;
+		RuntimeObject* L_2 = ___pinnable2;
+		__this->____pinnable_2 = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____pinnable_2), (void*)L_2);
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void MemoryHandle__ctor_mBC4C2B7E7F10F5F93EFCF6A3A24D41CE79916C91_AdjustorThunk (RuntimeObject* __this, void* ___pointer0, GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC ___handle1, RuntimeObject* ___pinnable2, const RuntimeMethod* method)
+{
+	MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD*>(__this + _offset);
+	MemoryHandle__ctor_mBC4C2B7E7F10F5F93EFCF6A3A24D41CE79916C91(_thisAdjusted, ___pointer0, ___handle1, ___pinnable2, method);
+}
+// System.Void* System.Buffers.MemoryHandle::get_Pointer()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* MemoryHandle_get_Pointer_mB37B69B8014746F855683C47FF2E6EC46D656CA8 (MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD* __this, const RuntimeMethod* method) 
+{
+	{
+		void* L_0 = __this->____pointer_0;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  void* MemoryHandle_get_Pointer_mB37B69B8014746F855683C47FF2E6EC46D656CA8_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD*>(__this + _offset);
+	void* _returnValue;
+	_returnValue = MemoryHandle_get_Pointer_mB37B69B8014746F855683C47FF2E6EC46D656CA8_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+// System.Void System.Buffers.MemoryHandle::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MemoryHandle_Dispose_m1F3EAA54B49EACFC7E489AEF1FF630553FEBE229 (MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IPinnable_tA3989EA495C0118966BAAF8848C0009947BB49C0_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC* L_0 = (&__this->____handle_1);
+		bool L_1;
+		L_1 = GCHandle_get_IsAllocated_m241908103D8D867E11CCAB73C918729825E86843(L_0, NULL);
+		if (!L_1)
+		{
+			goto IL_0018;
+		}
+	}
+	{
+		GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC* L_2 = (&__this->____handle_1);
+		GCHandle_Free_m1320A260E487EB1EA6D95F9E54BFFCB5A4EF83A3(L_2, NULL);
+	}
+
+IL_0018:
+	{
+		RuntimeObject* L_3 = __this->____pinnable_2;
+		if (!L_3)
+		{
+			goto IL_0032;
+		}
+	}
+	{
+		RuntimeObject* L_4 = __this->____pinnable_2;
+		NullCheck(L_4);
+		InterfaceActionInvoker0::Invoke(0 /* System.Void System.Buffers.IPinnable::Unpin() */, IPinnable_tA3989EA495C0118966BAAF8848C0009947BB49C0_il2cpp_TypeInfo_var, L_4);
+		__this->____pinnable_2 = (RuntimeObject*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____pinnable_2), (void*)(RuntimeObject*)NULL);
+	}
+
+IL_0032:
+	{
+		__this->____pointer_0 = (void*)((uintptr_t)0);
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void MemoryHandle_Dispose_m1F3EAA54B49EACFC7E489AEF1FF630553FEBE229_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD*>(__this + _offset);
+	MemoryHandle_Dispose_m1F3EAA54B49EACFC7E489AEF1FF630553FEBE229(_thisAdjusted, method);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop
@@ -2364,6 +2562,13 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EventData_set_Reserved_m0FE1
 		int32_t L_0 = ___value0;
 		__this->___U3CReservedU3Ek__BackingField_2 = L_0;
 		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void* MemoryHandle_get_Pointer_mB37B69B8014746F855683C47FF2E6EC46D656CA8_inline (MemoryHandle_t505785861D4FF84F850A3FF775BE6AE1833D2AFD* __this, const RuntimeMethod* method) 
+{
+	{
+		void* L_0 = __this->____pointer_0;
+		return L_0;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t BinaryPrimitives_ReverseEndianness_mCCA2099164ECA9672968898DD996A9F04B392FFF_inline (uint32_t ___value0, const RuntimeMethod* method) 

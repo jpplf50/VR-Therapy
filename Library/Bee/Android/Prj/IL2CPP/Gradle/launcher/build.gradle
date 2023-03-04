@@ -16,7 +16,7 @@ android {
     defaultConfig {
         minSdkVersion 24
         targetSdkVersion 30
-        applicationId 'com.DefaultCompany.Myproject'
+        applicationId 'com.jpplf50.VRTherapy'
         ndk {
             abiFilters 'arm64-v8a'
         }

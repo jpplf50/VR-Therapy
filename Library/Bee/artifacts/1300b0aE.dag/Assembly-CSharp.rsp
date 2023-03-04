@@ -121,6 +121,7 @@
 -define:ENABLE_TIMELINE
 -define:ENABLE_INPUT_SYSTEM
 -define:ENABLE_LEGACY_INPUT_MANAGER
+-define:UNITY_POST_PROCESSING_STACK_V2
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"C:/Users/jpplf/Documents/GitHub/VR-Therapy/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
@@ -335,6 +336,8 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.InternalAPIEngineBridge.007.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1300b0aE.dag/Unity.Postprocessing.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1300b0aE.dag/Unity.Postprocessing.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.Rider.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.Services.Core.Analytics.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.Services.Core.Environments.ref.dll"
@@ -379,11 +382,15 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.SpatialTracking.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
-"Assets/Animator/SpiderBehaviour.cs"
-"Assets/FFOSControllerData/DisplayInputData.cs"
-"Assets/FFOSControllerData/InputData.cs"
+"Assets/Scripts/DisplayInputData.cs"
 "Assets/Scripts/GameController.cs"
+"Assets/Scripts/InputData.cs"
+"Assets/Scripts/MenuControllerHeight.cs"
+"Assets/Scripts/MenuControllerSpiders.cs"
+"Assets/Scripts/SpiderBehaviour.cs"
 "Assets/Scripts/XRPlatformControllerSetup.cs"
+"Assets/simple modular human/scripts/clothing.cs"
+"Assets/simple modular human/scripts/Test_script.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs"
