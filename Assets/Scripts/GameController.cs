@@ -53,7 +53,7 @@ public class GameController : MonoBehaviour
         tableSpiders = 0;
         floorSpiders = 0;
         updateText(tableSpiders, floorSpiders, spiderInformation);
-        // 0 - intro, 1 - Living Room, 2 - Office, Low Height - 3, Medium Height - 4, High Height - 5
+        // 0 - intro, 1 - Living Room, 2 - Office, Low Height - 3, Medium Height - 4, High Height - 5, 6 - Classroom, 7 - Theater
         currentLevel = 0;
 
         tcpListenerThread = new Thread (new ThreadStart(ListenForIncommingRequests)); 		

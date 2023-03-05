@@ -10,14 +10,14 @@ public class Test_script : MonoBehaviour
 
     NavMeshAgent agent;
    public Animator ani;
-   public GameObject aim_point;
+   /*public GameObject aim_point;
 
     public bool execute_walking;
     public bool execute_sitting;
     public bool execute_stealing;
     public bool execute_picking_up;
 
-    public bool execute_running;
+    public bool execute_running;*/
 
     public float walk_speed;
     public float run_speed;
@@ -26,7 +26,7 @@ public class Test_script : MonoBehaviour
     Vector3 sitting_Rotation;
 
     Vector3 stealing_position;
-    Vector3 stealing_Rotation;
+    Vector3 stealing_Rotation; 
 
 
   
@@ -52,7 +52,7 @@ public class Test_script : MonoBehaviour
         stealing_position = new Vector3(0,0.04185915f,-0.07200003f);
         stealing_Rotation = new Vector3(0,180,0);
 
-        way_points.Clear();
+        /*way_points.Clear();
         Sitting_points.Clear();
         Stealing_points.Clear();
         pick_up_points.Clear();
@@ -77,7 +77,10 @@ public class Test_script : MonoBehaviour
         foreach (GameObject g in pick_up_pointsFind)
         {
             pick_up_points.Add(g);
-        }
+        }*/
+
+        if(sit)
+            StartCoroutine(sitting_down());
 
 
     }
@@ -96,7 +99,7 @@ public class Test_script : MonoBehaviour
     {
         yield return new WaitForSeconds(0);
 
-        transform.parent = aim_point.transform;
+        //transform.parent = aim_point.transform;
        
 
       
@@ -104,12 +107,10 @@ public class Test_script : MonoBehaviour
         Destroy(agent);
 
         ani.SetInteger("legs", 3);
-        ani.SetInteger("arms", 3);
+        ani.SetInteger("arms", 10);
 
         transform.localPosition = sitting_position;
         transform.localEulerAngles = sitting_Rotation;
-
-
 
         yield return new WaitForSeconds(5);
 
@@ -128,7 +129,7 @@ public class Test_script : MonoBehaviour
     {
         yield return new WaitForSeconds(0);
         crowbar.SetActive(true);
-        transform.parent = aim_point.transform;
+        //transform.parent = aim_point.transform;
         transform.localPosition = stealing_position;
         transform.localEulerAngles = stealing_Rotation;
 
@@ -169,7 +170,137 @@ public class Test_script : MonoBehaviour
     void Update()
     {
 
-        if(!ready)
+        /*if (walk)
+        {
+
+            if (Vector3.Distance(transform.position,aim_point.transform.position) > 0.25f)
+            {
+                
+                agent.speed = walk_speed;
+                agent.SetDestination(aim_point.transform.position);
+                ani.SetInteger("arms", 1);
+                ani.SetInteger("legs", 1);
+            }
+
+            if (Vector3.Distance(transform.position, aim_point.transform.position) < 0.25f)
+            {
+                agent.speed = 0;
+
+                ani.SetInteger("arms", 5);
+                ani.SetInteger("legs", 5);
+
+                destermine_new_aim = false;
+            }
+
+        }*/
+        /*if(run)
+        {
+
+            if (Vector3.Distance(transform.position, aim_point.transform.position) > 0.25f)
+            {
+                Debug.Log("going to run");
+                agent.speed = run_speed;
+                agent.SetDestination(aim_point.transform.position);
+                ani.SetInteger("arms", 2);
+                ani.SetInteger("legs", 2);
+            }
+
+            if (Vector3.Distance(transform.position, aim_point.transform.position) < 0.25f)
+            {
+                agent.speed = 0;
+
+                ani.SetInteger("arms", 5);
+                ani.SetInteger("legs", 5);
+
+                destermine_new_aim = false;
+            }
+
+        }*/
+        if(sit && !in_sitting)
+        {
+
+            /*if (Vector3.Distance(transform.position, aim_point.transform.position) > 0.25f)
+            {
+                
+                agent.speed = walk_speed;
+                agent.SetDestination(aim_point.transform.position);
+                ani.SetInteger("arms", 1);
+                ani.SetInteger("legs", 1);
+            }*/
+
+            //if (Vector3.Distance(transform.position, aim_point.transform.position) < 0.25f)
+            //{
+                agent.speed = 0;
+
+
+                if(!in_sitting)
+                {
+                    in_sitting = true;
+
+                    sitting_start = StartCoroutine(sitting_down());
+                }
+
+            //}
+
+        }
+        /*if(steal && !in_stealing)
+        {
+
+            if (Vector3.Distance(transform.position, aim_point.transform.position) > 0.25f)
+            {
+                
+                agent.speed = walk_speed;
+                agent.SetDestination(aim_point.transform.position);
+                ani.SetInteger("arms", 1);
+                ani.SetInteger("legs", 1);
+            }
+
+            if (Vector3.Distance(transform.position, aim_point.transform.position) < 0.25f)
+            {
+                agent.speed = 0;
+
+                
+
+                if (!in_stealing)
+                {
+                    in_stealing = true;
+
+                    stealing_start = StartCoroutine(stealing_execute());
+                }
+
+            }
+
+
+        }
+        */
+        /*if(pick_up && !in_pickup)
+        {
+            if (Vector3.Distance(transform.position, aim_point.transform.position) > 0.25f)
+            {
+                
+                agent.speed = walk_speed;
+                agent.SetDestination(aim_point.transform.position);
+                ani.SetInteger("arms", 1);
+                ani.SetInteger("legs", 1);
+            }
+
+            if (Vector3.Distance(transform.position, aim_point.transform.position) < 0.25f)
+            {
+                agent.speed = 0;
+
+                
+
+                if (!in_pickup)
+                {
+                    in_pickup = true;
+
+                    pickup_start = StartCoroutine(pickup_execute());
+                }
+
+            }
+            
+        */
+        /*if(!ready)
         {
             return;
         }
@@ -231,139 +362,10 @@ public class Test_script : MonoBehaviour
             }
 
         }
-        if (destermine_new_aim)
-        {
-            if (walk)
-            {
-
-                if (Vector3.Distance(transform.position,aim_point.transform.position) > 0.25f)
-                {
-                   
-                    agent.speed = walk_speed;
-                    agent.SetDestination(aim_point.transform.position);
-                    ani.SetInteger("arms", 1);
-                    ani.SetInteger("legs", 1);
-                }
-
-                if (Vector3.Distance(transform.position, aim_point.transform.position) < 0.25f)
-                {
-                    agent.speed = 0;
-
-                    ani.SetInteger("arms", 5);
-                    ani.SetInteger("legs", 5);
-
-                    destermine_new_aim = false;
-                }
-
-            }
-            if(run)
-            {
-
-                if (Vector3.Distance(transform.position, aim_point.transform.position) > 0.25f)
-                {
-                    Debug.Log("going to run");
-                    agent.speed = run_speed;
-                    agent.SetDestination(aim_point.transform.position);
-                    ani.SetInteger("arms", 2);
-                    ani.SetInteger("legs", 2);
-                }
-
-                if (Vector3.Distance(transform.position, aim_point.transform.position) < 0.25f)
-                {
-                    agent.speed = 0;
-
-                    ani.SetInteger("arms", 5);
-                    ani.SetInteger("legs", 5);
-
-                    destermine_new_aim = false;
-                }
-
-            }
-            if(sit && !in_sitting)
-            {
-
-                if (Vector3.Distance(transform.position, aim_point.transform.position) > 0.25f)
-                {
-                    
-                    agent.speed = walk_speed;
-                    agent.SetDestination(aim_point.transform.position);
-                    ani.SetInteger("arms", 1);
-                    ani.SetInteger("legs", 1);
-                }
-
-                if (Vector3.Distance(transform.position, aim_point.transform.position) < 0.25f)
-                {
-                    agent.speed = 0;
+        
 
 
-                    if(!in_sitting)
-                    {
-                        in_sitting = true;
-
-                        sitting_start = StartCoroutine(sitting_down());
-                    }
-
-                }
-
-            }
-            if(steal && !in_stealing)
-            {
-
-                if (Vector3.Distance(transform.position, aim_point.transform.position) > 0.25f)
-                {
-                 
-                    agent.speed = walk_speed;
-                    agent.SetDestination(aim_point.transform.position);
-                    ani.SetInteger("arms", 1);
-                    ani.SetInteger("legs", 1);
-                }
-
-                if (Vector3.Distance(transform.position, aim_point.transform.position) < 0.25f)
-                {
-                    agent.speed = 0;
-
-                 
-
-                    if (!in_stealing)
-                    {
-                        in_stealing = true;
-
-                        stealing_start = StartCoroutine(stealing_execute());
-                    }
-
-                }
-
-
-            }
-            if(pick_up && !in_pickup)
-            {
-                if (Vector3.Distance(transform.position, aim_point.transform.position) > 0.25f)
-                {
-                    
-                    agent.speed = walk_speed;
-                    agent.SetDestination(aim_point.transform.position);
-                    ani.SetInteger("arms", 1);
-                    ani.SetInteger("legs", 1);
-                }
-
-                if (Vector3.Distance(transform.position, aim_point.transform.position) < 0.25f)
-                {
-                    agent.speed = 0;
-
-                   
-
-                    if (!in_pickup)
-                    {
-                        in_pickup = true;
-
-                        pickup_start = StartCoroutine(pickup_execute());
-                    }
-
-                }
-            }
-
-
-        }
+        }*/
 
 
         
@@ -378,12 +380,13 @@ public class Test_script : MonoBehaviour
 
 
 
-    public List<GameObject> way_points = new List<GameObject>();
+    /*public List<GameObject> way_points = new List<GameObject>();
     public List<GameObject> Sitting_points = new List<GameObject>();
     public List<GameObject> Stealing_points = new List<GameObject>();
-    public List<GameObject> pick_up_points = new List<GameObject>();
+    public List<GameObject> pick_up_points = new List<GameObject>();*/
 
   
 
 
 }
+
