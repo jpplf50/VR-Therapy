@@ -62,7 +62,7 @@ public class SpiderBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Hands")
+        if(other.gameObject.tag == "Left Hand" || other.gameObject.tag == "Right Hand")
             StartCoroutine(Die());
     }
 
@@ -140,6 +140,6 @@ public class SpiderBehaviour : MonoBehaviour
                 counter = 0;
             }
                 
-            }
+        }
     }
 }

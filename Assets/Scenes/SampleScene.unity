@@ -3328,6 +3328,7 @@ GameObject:
   - component: {fileID: 283002682}
   - component: {fileID: 283002681}
   - component: {fileID: 283002680}
+  - component: {fileID: 283002684}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -3837,6 +3838,19 @@ MonoBehaviour:
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &283002684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283002678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c5d97f639e84654c8b0c66ea16be3f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spider: {fileID: 553602748772772248, guid: ec028a14490a4da43b3ae884e55d3dcf, type: 3}
 --- !u!1001 &291189035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13298,6 +13312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4b506310dc18094fb2134210718a0f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  handspider: {fileID: 283002684}
   spider: {fileID: 7014392939318061091, guid: 6cf97566a1267a643aae6c81ec64a936, type: 3}
   xrRig: {fileID: 862869154}
   spiderInformation: {fileID: 1075270084}

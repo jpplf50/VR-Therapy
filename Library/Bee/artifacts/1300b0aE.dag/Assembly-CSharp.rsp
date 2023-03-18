@@ -384,6 +384,8 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
 "Assets/Scripts/DisplayInputData.cs"
 "Assets/Scripts/GameController.cs"
+"Assets/Scripts/HandSpider.cs"
+"Assets/Scripts/HandSpiderMovement.cs"
 "Assets/Scripts/InputData.cs"
 "Assets/Scripts/lookAtPlayer.cs"
 "Assets/Scripts/MenuControllerHeight.cs"

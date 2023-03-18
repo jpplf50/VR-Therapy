@@ -16,6 +16,8 @@ public class GameController : MonoBehaviour
 {
 
     private InputData _inputData;
+
+    public HandSpider handspider;
     public GameObject spider;
 
     public GameObject xrRig;
@@ -108,6 +110,10 @@ public class GameController : MonoBehaviour
                         switch(messageText[1]){
                             case "tamanho":
                                 spiderSize = float.Parse(messageText[2], CultureInfo.InvariantCulture);
+                            break;
+                            case "mao":
+                                handspider.spawnSpider();
+                                spidersList = GameObject.FindGameObjectsWithTag("Aranhas");
                             break;
                             case "eliminar":
                                 if(spidersList != null)

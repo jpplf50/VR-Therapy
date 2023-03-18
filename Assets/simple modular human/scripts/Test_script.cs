@@ -82,6 +82,7 @@ public class Test_script : MonoBehaviour
         if(sit)
             StartCoroutine(sitting_down());
 
+        //ani.enabled = false;
 
     }
 
@@ -120,6 +121,7 @@ public class Test_script : MonoBehaviour
         in_sitting = false;
         destermine_new_aim = false;
         transform.parent = null;
+
 
         StopCoroutine(sitting_start);
     }
