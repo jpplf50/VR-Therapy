@@ -1,7 +1,10 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - DisplayInputData
     - GameController
+    - HandSpider
+    - HandSpiderMovement
     - InputData
     - MenuControllerHeight
     - MenuControllerSocialAnx
@@ -39,6 +42,7 @@ ScriptsOnlyBuild:
     - UnityEngine.XR.Interaction.Toolkit.LocomotionSystem
     - UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster
     - UnityEngine.XR.Interaction.Toolkit.UI.XRUIInputModule
+    - UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable
     - UnityEngine.XR.Interaction.Toolkit.XRInteractionManager
     - UnityEngine.XR.Interaction.Toolkit.XRInteractorLineVisual
     - UnityEngine.XR.Interaction.Toolkit.XRRayInteractor
@@ -125,11 +129,14 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Style
     - TMPro.VertexGradient
     Unity.XR.Interaction.Toolkit:
+    - UnityEngine.XR.Interaction.Toolkit.ActivateEvent
+    - UnityEngine.XR.Interaction.Toolkit.DeactivateEvent
     - UnityEngine.XR.Interaction.Toolkit.HoverEnterEvent
     - UnityEngine.XR.Interaction.Toolkit.HoverExitEvent
     - UnityEngine.XR.Interaction.Toolkit.InteractionLayerMask
     - UnityEngine.XR.Interaction.Toolkit.SelectEnterEvent
     - UnityEngine.XR.Interaction.Toolkit.SelectExitEvent
+    - UnityEngine.XR.Interaction.Toolkit.XRInteractableEvent
     - UnityEngine.XR.Interaction.Toolkit.XRInteractorEvent
     UnityEngine.CoreModule:
     - UnityEngine.Events.ArgumentCache
@@ -223,89 +230,95 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1880}
     - Class: 114
-      Script: {instanceID: 2312}
+      Script: {instanceID: 2240}
     - Class: 114
-      Script: {instanceID: 2756}
+      Script: {instanceID: 2314}
     - Class: 114
-      Script: {instanceID: 3366}
+      Script: {instanceID: 2758}
     - Class: 114
-      Script: {instanceID: 3630}
+      Script: {instanceID: 3368}
     - Class: 114
-      Script: {instanceID: 3720}
+      Script: {instanceID: 3632}
     - Class: 114
-      Script: {instanceID: 4036}
+      Script: {instanceID: 3722}
     - Class: 114
-      Script: {instanceID: 4904}
+      Script: {instanceID: 3936}
+    - Class: 114
+      Script: {instanceID: 4040}
+    - Class: 114
+      Script: {instanceID: 4266}
+    - Class: 114
+      Script: {instanceID: 4530}
     - Class: 114
       Script: {instanceID: 4910}
     - Class: 114
-      Script: {instanceID: 5000}
+      Script: {instanceID: 4916}
     - Class: 114
-      Script: {instanceID: 5114}
+      Script: {instanceID: 5006}
     - Class: 114
-      Script: {instanceID: 5128}
+      Script: {instanceID: 5120}
     - Class: 114
-      Script: {instanceID: 5336}
+      Script: {instanceID: 5134}
     - Class: 114
-      Script: {instanceID: 5474}
+      Script: {instanceID: 5342}
     - Class: 114
-      Script: {instanceID: 5486}
+      Script: {instanceID: 5480}
     - Class: 114
-      Script: {instanceID: 5504}
+      Script: {instanceID: 5492}
     - Class: 114
-      Script: {instanceID: 5836}
+      Script: {instanceID: 5510}
     - Class: 114
-      Script: {instanceID: 6370}
+      Script: {instanceID: 5842}
     - Class: 114
-      Script: {instanceID: 6508}
+      Script: {instanceID: 6376}
     - Class: 114
-      Script: {instanceID: 6660}
+      Script: {instanceID: 6514}
     - Class: 114
-      Script: {instanceID: 6754}
+      Script: {instanceID: 6666}
     - Class: 114
-      Script: {instanceID: 6858}
+      Script: {instanceID: 6760}
     - Class: 114
-      Script: {instanceID: 7244}
+      Script: {instanceID: 6864}
     - Class: 114
-      Script: {instanceID: 7522}
+      Script: {instanceID: 7250}
     - Class: 114
-      Script: {instanceID: 7686}
+      Script: {instanceID: 7528}
     - Class: 114
-      Script: {instanceID: 7878}
+      Script: {instanceID: 7692}
     - Class: 114
-      Script: {instanceID: 7990}
+      Script: {instanceID: 7884}
     - Class: 114
-      Script: {instanceID: 8014}
+      Script: {instanceID: 7996}
     - Class: 114
-      Script: {instanceID: 8242}
+      Script: {instanceID: 8020}
     - Class: 114
-      Script: {instanceID: 8334}
+      Script: {instanceID: 8248}
     - Class: 114
-      Script: {instanceID: 8350}
+      Script: {instanceID: 8340}
     - Class: 114
-      Script: {instanceID: 8660}
+      Script: {instanceID: 8356}
     - Class: 114
-      Script: {instanceID: 8866}
+      Script: {instanceID: 8666}
     - Class: 114
-      Script: {instanceID: 8968}
+      Script: {instanceID: 8872}
     - Class: 114
-      Script: {instanceID: 9432}
+      Script: {instanceID: 8974}
     - Class: 114
-      Script: {instanceID: 9772}
+      Script: {instanceID: 9438}
     - Class: 114
-      Script: {instanceID: 9846}
+      Script: {instanceID: 9780}
     - Class: 114
-      Script: {instanceID: 10150}
+      Script: {instanceID: 9854}
     - Class: 114
-      Script: {instanceID: 10464}
+      Script: {instanceID: 10158}
     - Class: 114
-      Script: {instanceID: 230022}
+      Script: {instanceID: 10472}
     - Class: 114
-      Script: {instanceID: 230024}
+      Script: {instanceID: 287998}
     - Class: 114
-      Script: {instanceID: 230026}
+      Script: {instanceID: 288000}
     - Class: 114
-      Script: {instanceID: 274596}
+      Script: {instanceID: 288002}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -459,6 +472,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnCollisionStayMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: f467b0fc47a87dfadcfa285ed66b8320
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HandSpiderMovement
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -701,6 +720,12 @@ ScriptsOnlyBuild:
     className: UnityOnDropdownValueChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 5ede4e2cf2acf2fb4cb2011c799fc033
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuControllerSocialAnx
+  - hash:
+      serializedVersion: 2
       Hash: 5d5b0c61f3ab6ff5f41b1bbe19764526
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.OnScreen
@@ -759,6 +784,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnScrollMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 6a8af270c50cd9f936961758bf68b9b8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HandSpider
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -1247,7 +1278,7 @@ ScriptsOnlyBuild:
     className: UnityOnBeginDragMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 7926f85f1dc6da4ca261d8b76f683f8a
+      Hash: ff5e3f177f43997daca92e81d5c239c7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameController
@@ -1787,6 +1818,12 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 83e769eee07fc231384c812eedbb8224
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: lookAtPlayer
+  - hash:
+      serializedVersion: 2
       Hash: bb1f009dbd90351bdab2650da9bdb89e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1989,19 +2026,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 83e769eee07fc231384c812eedbb8224
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: lookAtPlayer
-  - hash:
-      serializedVersion: 2
-      Hash: 5ede4e2cf2acf2fb4cb2011c799fc033
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MenuControllerSocialAnx
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/OneDrive - Universidade de Lisboa/VR/VRTherapyWithSocketsSocialAnx.apk
+  playerPath: D:/OneDrive - Universidade de Lisboa/VR/VRTherapyWithSocketsSocialAnx
+    0.5.apk

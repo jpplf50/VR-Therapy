@@ -7,14 +7,15 @@ TagManager:
   - Aranhas
   - Left Hand
   - Right Hand
+  - Grabbables
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Grabbables
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 

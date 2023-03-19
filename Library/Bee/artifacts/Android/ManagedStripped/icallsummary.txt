@@ -305,6 +305,7 @@ UnityEngine.Cursor::set_lockState
 UnityEngine.Cursor::get_lockState
 UnityEngine.Debug::get_isDebugBuild
 UnityEngine.Debug::ExtractStackTraceNoAlloc
+UnityEngine.Debug::DrawLine_Injected
 UnityEngine.DebugLogHandler::Internal_Log
 UnityEngine.DebugLogHandler::Internal_LogException
 UnityEngine.Display::RelativeMouseAtImpl

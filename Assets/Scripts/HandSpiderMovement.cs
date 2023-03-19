@@ -46,7 +46,7 @@ public class HandSpiderMovement : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Left Hand")
+        if(other.gameObject.tag == "Left Hand" || other.gameObject.tag == "Grabbables")
             StartCoroutine(Die());
     }
 
@@ -82,10 +82,13 @@ public class HandSpiderMovement : MonoBehaviour
                 transform.localRotation = rot; 
                 
                 // put 0 on the axys you do not want for the rotation object to rotate
-                transform.eulerAngles = new Vector3(transform.localRotation.x, transform.eulerAngles.y, transform.localRotation.z); 
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z); 
                 //transform.LookAt(new Vector3(transform.position.x + target.x, transform.position.y, transform.position.z + target.z));
                 var step = speed * Time.deltaTime; // calculate distance to move
                 transform.localPosition = Vector3.MoveTowards(transform.localPosition, target, step);
+
+                //Vibrate the controller
+                _inputData._rightController.SendHapticImpulse(0u, 0.3f, 0.1f);
             }
             
             if( Vector3.Distance(transform.localPosition, target) < 0.001f){

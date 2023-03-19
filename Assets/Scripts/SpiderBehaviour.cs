@@ -62,7 +62,7 @@ public class SpiderBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Left Hand" || other.gameObject.tag == "Right Hand")
+        if(other.gameObject.tag == "Left Hand" || other.gameObject.tag == "Right Hand" || other.gameObject.tag == "Grabbables")
             StartCoroutine(Die());
     }
 
