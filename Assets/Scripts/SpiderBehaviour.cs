@@ -62,8 +62,25 @@ public class SpiderBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Left Hand" || other.gameObject.tag == "Right Hand" || other.gameObject.tag == "Grabbables")
-            StartCoroutine(Die());
+        switch(other.gameObject.tag)
+        {
+            case "Left Hand":
+            case "Right Hand":
+            case "Grabbables":
+                StartCoroutine(Die());
+            break;
+            case "Container":
+                move = false;
+            break;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.tag == "Container")
+        {
+            move = true;
+        }
     }
 
     IEnumerator Die()
@@ -117,6 +134,9 @@ public class SpiderBehaviour : MonoBehaviour
             }
 
         }
+        else
+            mAnimator.SetTrigger("Stop Walking");
+
         
         if (_inputData._leftController.TryGetFeatureValue(CommonUsages.primaryButton, out bool valueLeft))
         {

@@ -4564,14 +4564,14 @@ struct U3CU3Ec_tB9FAB1E6994B42B67246693CD6E523D26D4BCC45_StaticFields
 	WaitCallback_tFB2C7FD58D024BBC2B0333DC7A4CB63B8DEBD5D3* ___U3CU3E9__27_0_1;
 };
 
-// SpiderBehaviour/<Die>d__14
-struct U3CDieU3Ed__14_t5E0C793F5A7FB1564FCD39397AD1024C31D0BBA6  : public RuntimeObject
+// SpiderBehaviour/<Die>d__15
+struct U3CDieU3Ed__15_tABF84B2B2625FFD9582DCF237391BE88837FBB33  : public RuntimeObject
 {
-	// System.Int32 SpiderBehaviour/<Die>d__14::<>1__state
+	// System.Int32 SpiderBehaviour/<Die>d__15::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object SpiderBehaviour/<Die>d__14::<>2__current
+	// System.Object SpiderBehaviour/<Die>d__15::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// SpiderBehaviour SpiderBehaviour/<Die>d__14::<>4__this
+	// SpiderBehaviour SpiderBehaviour/<Die>d__15::<>4__this
 	SpiderBehaviour_t99F44C706BAFAE00C65A89425B8D50CD98A74A1F* ___U3CU3E4__this_2;
 };
 
@@ -22313,7 +22313,7 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4158[9] =
 	static_cast<int32_t>(offsetof(MenuControllerSpiders_t2B98D4F2E1D8BC537A83CE90B42B58982922B631, ___dropDown_4)),static_cast<int32_t>(offsetof(MenuControllerSpiders_t2B98D4F2E1D8BC537A83CE90B42B58982922B631, ___slider_5)),static_cast<int32_t>(offsetof(MenuControllerSpiders_t2B98D4F2E1D8BC537A83CE90B42B58982922B631, ___toggle_6)),static_cast<int32_t>(offsetof(MenuControllerSpiders_t2B98D4F2E1D8BC537A83CE90B42B58982922B631, ___teleportButton_7)),static_cast<int32_t>(offsetof(MenuControllerSpiders_t2B98D4F2E1D8BC537A83CE90B42B58982922B631, ___xrRig_8)),static_cast<int32_t>(offsetof(MenuControllerSpiders_t2B98D4F2E1D8BC537A83CE90B42B58982922B631, ___gameController_9)),static_cast<int32_t>(offsetof(MenuControllerSpiders_t2B98D4F2E1D8BC537A83CE90B42B58982922B631, ___spiderSizeText_10)),static_cast<int32_t>(offsetof(MenuControllerSpiders_t2B98D4F2E1D8BC537A83CE90B42B58982922B631, ___dropDownIndex_11)),static_cast<int32_t>(offsetof(MenuControllerSpiders_t2B98D4F2E1D8BC537A83CE90B42B58982922B631, ___dropDownText_12)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4159[3] = 
 {
-	static_cast<int32_t>(offsetof(U3CDieU3Ed__14_t5E0C793F5A7FB1564FCD39397AD1024C31D0BBA6, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CDieU3Ed__14_t5E0C793F5A7FB1564FCD39397AD1024C31D0BBA6, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CDieU3Ed__14_t5E0C793F5A7FB1564FCD39397AD1024C31D0BBA6, ___U3CU3E4__this_2)),};
+	static_cast<int32_t>(offsetof(U3CDieU3Ed__15_tABF84B2B2625FFD9582DCF237391BE88837FBB33, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CDieU3Ed__15_tABF84B2B2625FFD9582DCF237391BE88837FBB33, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CDieU3Ed__15_tABF84B2B2625FFD9582DCF237391BE88837FBB33, ___U3CU3E4__this_2)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4160[12] = 
 {
 	static_cast<int32_t>(offsetof(SpiderBehaviour_t99F44C706BAFAE00C65A89425B8D50CD98A74A1F, ____inputData_4)),static_cast<int32_t>(offsetof(SpiderBehaviour_t99F44C706BAFAE00C65A89425B8D50CD98A74A1F, ___mAnimator_5)),static_cast<int32_t>(offsetof(SpiderBehaviour_t99F44C706BAFAE00C65A89425B8D50CD98A74A1F, ___speed_6)),static_cast<int32_t>(offsetof(SpiderBehaviour_t99F44C706BAFAE00C65A89425B8D50CD98A74A1F, ___target_7)),static_cast<int32_t>(offsetof(SpiderBehaviour_t99F44C706BAFAE00C65A89425B8D50CD98A74A1F, ___move_8)),static_cast<int32_t>(offsetof(SpiderBehaviour_t99F44C706BAFAE00C65A89425B8D50CD98A74A1F, ___counter_9)),static_cast<int32_t>(offsetof(SpiderBehaviour_t99F44C706BAFAE00C65A89425B8D50CD98A74A1F, ___reachedDestination_10)),static_cast<int32_t>(offsetof(SpiderBehaviour_t99F44C706BAFAE00C65A89425B8D50CD98A74A1F, ___waitTime_11)),static_cast<int32_t>(offsetof(SpiderBehaviour_t99F44C706BAFAE00C65A89425B8D50CD98A74A1F, ___groundSpider_12)),static_cast<int32_t>(offsetof(SpiderBehaviour_t99F44C706BAFAE00C65A89425B8D50CD98A74A1F, ___spiderPrefab_13)),static_cast<int32_t>(offsetof(SpiderBehaviour_t99F44C706BAFAE00C65A89425B8D50CD98A74A1F, ___gameController_14)),static_cast<int32_t>(offsetof(SpiderBehaviour_t99F44C706BAFAE00C65A89425B8D50CD98A74A1F, ___selfSize_15)),};

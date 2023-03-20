@@ -43,6 +43,9 @@ public class HandSpiderMovement : MonoBehaviour
         counter = 0;
         reachedDestination = false;
         waitTime = Random.Range(150,300);
+
+        selfSize = 0.2f * 0.05f;
+        transform.localScale = new Vector3(selfSize,selfSize,selfSize);
     }
     private void OnTriggerEnter(Collider other)
     {
